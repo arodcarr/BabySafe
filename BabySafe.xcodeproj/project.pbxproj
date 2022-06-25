@@ -48,7 +48,6 @@
 				C30AF2536D9C2CEFC89A0583 /* Pods-BabySafe.debug.xcconfig */,
 				0CF10BE7D0A8130906201A5D /* Pods-BabySafe.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
