@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18760654A63030AAB3FD9C81 /* Pods_BabySafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA2737CFDDD0C6F3C5DF10F /* Pods_BabySafe.framework */; };
 		77A024862861FFF0007D76B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A024852861FFF0007D76B8 /* AppDelegate.swift */; };
 		77A024882861FFF0007D76B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A024872861FFF0007D76B8 /* SceneDelegate.swift */; };
 		77A0248A2861FFF0007D76B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A024892861FFF0007D76B8 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CF10BE7D0A8130906201A5D /* Pods-BabySafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabySafe.release.xcconfig"; path = "Target Support Files/Pods-BabySafe/Pods-BabySafe.release.xcconfig"; sourceTree = "<group>"; };
 		77A024822861FFF0007D76B8 /* BabySafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabySafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A024852861FFF0007D76B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77A024872861FFF0007D76B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		77A0248E2861FFF1007D76B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77A024912861FFF1007D76B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77A024932861FFF1007D76B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDA2737CFDDD0C6F3C5DF10F /* Pods_BabySafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabySafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C30AF2536D9C2CEFC89A0583 /* Pods-BabySafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabySafe.debug.xcconfig"; path = "Target Support Files/Pods-BabySafe/Pods-BabySafe.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18760654A63030AAB3FD9C81 /* Pods_BabySafe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27A6D7767E552AACF1A0EDCD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C30AF2536D9C2CEFC89A0583 /* Pods-BabySafe.debug.xcconfig */,
+				0CF10BE7D0A8130906201A5D /* Pods-BabySafe.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6C82306E94A8C2A5D2100DE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BDA2737CFDDD0C6F3C5DF10F /* Pods_BabySafe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		77A024792861FFF0007D76B8 = {
 			isa = PBXGroup;
 			children = (
 				77A024842861FFF0007D76B8 /* BabySafe */,
 				77A024832861FFF0007D76B8 /* Products */,
+				27A6D7767E552AACF1A0EDCD /* Pods */,
+				6C82306E94A8C2A5D2100DE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77A024962861FFF1007D76B8 /* Build configuration list for PBXNativeTarget "BabySafe" */;
 			buildPhases = (
+				4E9F977C3949CFEB67FFB903 /* [CP] Check Pods Manifest.lock */,
 				77A0247E2861FFF0007D76B8 /* Sources */,
 				77A0247F2861FFF0007D76B8 /* Frameworks */,
 				77A024802861FFF0007D76B8 /* Resources */,
+				9AE64FC13922A37FEB5912DB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E9F977C3949CFEB67FFB903 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BabySafe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AE64FC13922A37FEB5912DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BabySafe/Pods-BabySafe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BabySafe/Pods-BabySafe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BabySafe/Pods-BabySafe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		77A0247E2861FFF0007D76B8 /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		77A024972861FFF1007D76B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C30AF2536D9C2CEFC89A0583 /* Pods-BabySafe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +381,7 @@
 		};
 		77A024982861FFF1007D76B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CF10BE7D0A8130906201A5D /* Pods-BabySafe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
