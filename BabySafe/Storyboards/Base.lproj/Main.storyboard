@@ -42,7 +42,7 @@
         <scene sceneID="r30-vd-EUF">
             <objects>
                 <navigationController id="b9Y-xj-sF6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="circle.dashed.inset.filled" catalog="system" id="gYO-Rg-pgI"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="gYO-Rg-pgI"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="z66-13-tP8">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="429" y="289"/>
         </scene>
-        <!--HomeStoryboard-->
+        <!--TipsStoryboard-->
         <scene sceneID="vqY-4X-89M">
             <objects>
-                <viewControllerPlaceholder storyboardName="HomeStoryboard" id="wQS-Oa-V3A" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="TipsStoryboard" id="wQS-Oa-V3A" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="pencil.circle" catalog="system" badgeValue="d" id="1LE-Qw-jMf">
                         <color key="badgeColor" red="0.70968021199999998" green="0.34955417280000001" blue="0.80987197160000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBarItem>
@@ -68,11 +68,11 @@
             </objects>
             <point key="canvasLocation" x="1052" y="-863"/>
         </scene>
-        <!--Home-->
+        <!--Inicio-->
         <scene sceneID="wN7-eF-AAp">
             <objects>
                 <navigationController id="wWF-Xk-NVg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="scribble.variable" catalog="system" id="zJc-w9-qeC"/>
+                    <tabBarItem key="tabBarItem" title="Inicio" image="house" catalog="system" id="zJc-w9-qeC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gJr-Fz-aYi">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -87,9 +87,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="circle.dashed.inset.filled" catalog="system" width="128" height="121"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
+        <image name="house" catalog="system" width="128" height="106"/>
         <image name="pencil.circle" catalog="system" width="32" height="32"/>
-        <image name="scribble.variable" catalog="system" width="128" height="118"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

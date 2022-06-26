@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XJV-ZM-xrF">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="54" width="414" height="796"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -26,17 +26,46 @@
                         <constraints>
                             <constraint firstItem="XJV-ZM-xrF" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="WLV-u2-RXl"/>
                             <constraint firstItem="XJV-ZM-xrF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Xsu-FJ-9hD"/>
-                            <constraint firstItem="XJV-ZM-xrF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ouR-Ue-5PS"/>
-                            <constraint firstItem="XJV-ZM-xrF" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="y3i-wo-bix"/>
+                            <constraint firstItem="XJV-ZM-xrF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="ouR-Ue-5PS"/>
+                            <constraint firstItem="XJV-ZM-xrF" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="-12" id="y3i-wo-bix"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="tipsTableView" destination="XJV-ZM-xrF" id="9vD-Wa-5YZ"/>
+                        <segue destination="v2B-YV-dmg" kind="show" identifier="tipDetalleSegue" id="Tfw-XG-WVL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="15.942028985507248" y="83.705357142857139"/>
+        </scene>
+        <!--Detalle Tip View Controller-->
+        <scene sceneID="0Wk-wK-vQ6">
+            <objects>
+                <viewController id="v2B-YV-dmg" customClass="DetalleTipViewController" customModule="BabySafe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jqe-W9-P1w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f01-9R-bjP">
+                                <rect key="frame" x="45" y="88" width="324" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QUk-2V-wrh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JEr-bI-beE"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="f01-9R-bjP" id="Tei-oS-3oA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bbg-30-dOC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937.68115942028987" y="88.392857142857139"/>
         </scene>
     </scenes>
     <resources>
