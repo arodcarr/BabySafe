@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tXy-2v-4BN">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SettingsStoryboard-->
+        <scene sceneID="cPJ-BW-dKF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SettingsStoryboard" id="OTm-We-Fp5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" badgeValue="Hoka" systemItem="more" id="c08-Vd-KGX">
+                        <color key="badgeColor" name="AccentColor"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="2hx-pd-bfb"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IrL-Fo-o4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1188" y="169"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="tH6-u7-y2J">
+            <objects>
+                <tabBarController id="tXy-2v-4BN" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tWe-dB-56K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="wWF-Xk-NVg" kind="relationship" relationship="viewControllers" id="LNh-c5-UQc"/>
+                        <segue destination="b9Y-xj-sF6" kind="relationship" relationship="viewControllers" id="nar-40-RD9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fxL-mf-2qQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-750" y="-73"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="r30-vd-EUF">
+            <objects>
+                <navigationController id="b9Y-xj-sF6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="circle.dashed.inset.filled" catalog="system" id="gYO-Rg-pgI"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z66-13-tP8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OTm-We-Fp5" kind="relationship" relationship="rootViewController" id="mmK-kC-5DE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tmg-6n-xpW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="429" y="289"/>
+        </scene>
+        <!--HomeStoryboard-->
+        <scene sceneID="vqY-4X-89M">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeStoryboard" id="wQS-Oa-V3A" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="pencil.circle" catalog="system" badgeValue="d" id="1LE-Qw-jMf">
+                        <color key="badgeColor" red="0.70968021199999998" green="0.34955417280000001" blue="0.80987197160000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="80V-Uw-Gdy"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g2J-xc-K1U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="-863"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="wN7-eF-AAp">
+            <objects>
+                <navigationController id="wWF-Xk-NVg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="scribble.variable" catalog="system" id="zJc-w9-qeC"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gJr-Fz-aYi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wQS-Oa-V3A" kind="relationship" relationship="rootViewController" id="FvY-XX-aFX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zbq-Cm-wc5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="430" y="-863"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="circle.dashed.inset.filled" catalog="system" width="128" height="121"/>
+        <image name="pencil.circle" catalog="system" width="32" height="32"/>
+        <image name="scribble.variable" catalog="system" width="128" height="118"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
