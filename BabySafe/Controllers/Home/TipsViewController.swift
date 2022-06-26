@@ -54,7 +54,7 @@ extension TipsViewController: UITableViewDelegate, UITableViewDataSource {
         }
         cell.titleLabel.text = tipsList[indexPath.row].title
         cell.descriptionLabel.text = tipsList[indexPath.row].description
-        cell.likesLabel.text = "\(tipsList[indexPath.row].likes)"
+        cell.likesLabel.text = "🍼 \(tipsList[indexPath.row].likes)"
         return cell
     }
     
