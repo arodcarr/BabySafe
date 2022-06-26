@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		18760654A63030AAB3FD9C81 /* Pods_BabySafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA2737CFDDD0C6F3C5DF10F /* Pods_BabySafe.framework */; };
+		775F2B012867F12A00662397 /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775F2B002867F12A00662397 /* TipsViewController.swift */; };
+		775F2B062867F92D00662397 /* TipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775F2B042867F92D00662397 /* TipTableViewCell.swift */; };
+		775F2B072867F92D00662397 /* TipTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 775F2B052867F92D00662397 /* TipTableViewCell.xib */; };
+		775F2B0A2867FCB500662397 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775F2B092867FCB500662397 /* Tip.swift */; };
+		775F2B0C286802F900662397 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775F2B0B286802F900662397 /* Constants.swift */; };
 		77A024862861FFF0007D76B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A024852861FFF0007D76B8 /* AppDelegate.swift */; };
 		77A024882861FFF0007D76B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A024872861FFF0007D76B8 /* SceneDelegate.swift */; };
 		77A0248D2861FFF0007D76B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77A0248B2861FFF0007D76B8 /* Main.storyboard */; };
@@ -19,6 +24,11 @@
 
 /* Begin PBXFileReference section */
 		0CF10BE7D0A8130906201A5D /* Pods-BabySafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabySafe.release.xcconfig"; path = "Target Support Files/Pods-BabySafe/Pods-BabySafe.release.xcconfig"; sourceTree = "<group>"; };
+		775F2B002867F12A00662397 /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
+		775F2B042867F92D00662397 /* TipTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipTableViewCell.swift; sourceTree = "<group>"; };
+		775F2B052867F92D00662397 /* TipTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipTableViewCell.xib; sourceTree = "<group>"; };
+		775F2B092867FCB500662397 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
+		775F2B0B286802F900662397 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		77A024822861FFF0007D76B8 /* BabySafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabySafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A024852861FFF0007D76B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77A024872861FFF0007D76B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +71,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		775F2B022867F23000662397 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				775F2B082867FCA100662397 /* Models */,
+				775F2B032867F90900662397 /* Cells */,
+				775F2B002867F12A00662397 /* TipsViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		775F2B032867F90900662397 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				775F2B042867F92D00662397 /* TipTableViewCell.swift */,
+				775F2B052867F92D00662397 /* TipTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		775F2B082867FCA100662397 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				775F2B092867FCB500662397 /* Tip.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		77A024792861FFF0007D76B8 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +126,7 @@
 				77A0248E2861FFF1007D76B8 /* Assets.xcassets */,
 				77A024902861FFF1007D76B8 /* LaunchScreen.storyboard */,
 				77A024932861FFF1007D76B8 /* Info.plist */,
+				775F2B0B286802F900662397 /* Constants.swift */,
 			);
 			path = BabySafe;
 			sourceTree = "<group>";
@@ -96,6 +134,7 @@
 		77ED3EAA2867D92F009384C8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				775F2B022867F23000662397 /* Home */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -174,6 +213,7 @@
 				77A0248F2861FFF1007D76B8 /* Assets.xcassets in Resources */,
 				77ED3EA92867D91A009384C8 /* HomeStoryboard.storyboard in Resources */,
 				77A0248D2861FFF0007D76B8 /* Main.storyboard in Resources */,
+				775F2B072867F92D00662397 /* TipTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +250,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				77A024862861FFF0007D76B8 /* AppDelegate.swift in Sources */,
+				775F2B062867F92D00662397 /* TipTableViewCell.swift in Sources */,
+				775F2B0A2867FCB500662397 /* Tip.swift in Sources */,
 				77A024882861FFF0007D76B8 /* SceneDelegate.swift in Sources */,
+				775F2B012867F12A00662397 /* TipsViewController.swift in Sources */,
+				775F2B0C286802F900662397 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
