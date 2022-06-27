@@ -106,7 +106,11 @@
                                 <action selector="closeButtonPressed:" destination="gXv-8K-djg" id="xps-0T-NdT"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Guardar" id="Amf-dO-UZU"/>
+                        <barButtonItem key="rightBarButtonItem" title="Guardar" id="Amf-dO-UZU">
+                            <connections>
+                                <action selector="guardarButtonPressed:" destination="gXv-8K-djg" id="OMj-0t-DAa"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XDm-Yh-hfb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

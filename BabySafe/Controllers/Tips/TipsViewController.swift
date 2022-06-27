@@ -11,7 +11,7 @@ class TipsViewController: UIViewController {
 
     @IBOutlet weak var tipsTableView: UITableView!
     
-    let tipsList: [Tip] = Constants.tipsList
+    var tipsList: [Tip] = Constants.tipsList
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +46,9 @@ class TipsViewController: UIViewController {
         } else if segue.identifier == "tipNuevoSegue" {
             if let navigationController = segue.destination as? UINavigationController {
                 navigationController.modalPresentationStyle = .fullScreen
+                if let viewController = navigationController.viewControllers.first as? NuevoTipViewController {
+                    viewController.delegate = self
+                }
             }
         }
     }
@@ -79,3 +82,11 @@ extension TipsViewController: UITableViewDelegate, UITableViewDataSource {
     
     
 }
+extension TipsViewController: NuevoTipDelegate {
+    func guardarTip(tip: Tip) {
+        tipsList.append(tip)
+        tipsTableView.reloadData()
+    }
+}
+
+
