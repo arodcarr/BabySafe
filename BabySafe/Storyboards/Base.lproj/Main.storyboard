@@ -72,7 +72,7 @@
         <scene sceneID="wN7-eF-AAp">
             <objects>
                 <navigationController id="wWF-Xk-NVg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Inicio" image="house" catalog="system" id="zJc-w9-qeC"/>
+                    <tabBarItem key="tabBarItem" title="Inicio" image="scribble.variable" catalog="system" id="zJc-w9-qeC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gJr-Fz-aYi">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -88,8 +88,8 @@
     </scenes>
     <resources>
         <image name="gearshape" catalog="system" width="128" height="121"/>
-        <image name="house" catalog="system" width="128" height="106"/>
         <image name="pencil.circle" catalog="system" width="32" height="32"/>
+        <image name="scribble.variable" catalog="system" width="128" height="118"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

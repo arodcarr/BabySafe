@@ -17,7 +17,7 @@ class TipsViewController: UIViewController {
         super.viewDidLoad()
         prepareView()
     }
-    
+    //configurar la vista tips para mostrar
     func prepareView() {
         title = "Tips"
         navigationController?.navigationBar.backgroundColor = Constants.mainColor
@@ -27,15 +27,25 @@ class TipsViewController: UIViewController {
         tipsTableView.delegate = self
         tipsTableView.dataSource = self
         tipsTableView.register(UINib(nibName: "TipTableViewCell", bundle: nil), forCellReuseIdentifier: "TipTableViewCell")
+        let addTipButton = UIBarButtonItem(image: .add , style: .plain, target: self, action: #selector(addTipButtonPressed))
+        self.navigationItem.rightBarButtonItem  = addTipButton
+    }
+    
+    @objc private func addTipButtonPressed() {
+        performSegue(withIdentifier: "tipNuevoSegue", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let indexPath =  sender as? IndexPath  else {
-            return
-        }
         if segue.identifier == "tipDetalleSegue" {
+            guard let indexPath =  sender as? IndexPath  else {
+                return
+            }
             if let viewController = segue.destination as? DetalleTipViewController {
                 viewController.tip = tipsList[indexPath.row]
+            }
+        } else if segue.identifier == "tipNuevoSegue" {
+            if let navigationController = segue.destination as? UINavigationController {
+                navigationController.modalPresentationStyle = .fullScreen
             }
         }
     }

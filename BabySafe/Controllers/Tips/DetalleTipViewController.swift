@@ -11,10 +11,12 @@ class DetalleTipViewController: UIViewController {
     
     var tip: Tip?
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descripcionTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.text = tip?.title
+        descripcionTextView.text = tip?.description
     }
 
     /*
