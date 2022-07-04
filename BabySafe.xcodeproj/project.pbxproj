@@ -20,6 +20,10 @@
 		77A0248D2861FFF0007D76B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77A0248B2861FFF0007D76B8 /* Main.storyboard */; };
 		77A0248F2861FFF1007D76B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77A0248E2861FFF1007D76B8 /* Assets.xcassets */; };
 		77A024922861FFF1007D76B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77A024902861FFF1007D76B8 /* LaunchScreen.storyboard */; };
+		77BBCC192872000B00EE6E79 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 77BBCC182872000B00EE6E79 /* FirebaseFirestore */; };
+		77BBCC1B2872000B00EE6E79 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 77BBCC1A2872000B00EE6E79 /* FirebaseFirestoreCombine-Community */; };
+		77BBCC1D2872000B00EE6E79 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 77BBCC1C2872000B00EE6E79 /* FirebaseFirestoreSwift */; };
+		77BBCC1F2872007800EE6E79 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77BBCC1E2872007800EE6E79 /* GoogleService-Info.plist */; };
 		77ED3EA92867D91A009384C8 /* TipsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77ED3EA82867D91A009384C8 /* TipsStoryboard.storyboard */; };
 		77ED3EAD2867DAA1009384C8 /* SettingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77ED3EAC2867DAA1009384C8 /* SettingsStoryboard.storyboard */; };
 /* End PBXBuildFile section */
@@ -40,6 +44,7 @@
 		77A0248E2861FFF1007D76B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77A024912861FFF1007D76B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77A024932861FFF1007D76B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77BBCC1E2872007800EE6E79 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		77ED3EA82867D91A009384C8 /* TipsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TipsStoryboard.storyboard; sourceTree = "<group>"; };
 		77ED3EAC2867DAA1009384C8 /* SettingsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsStoryboard.storyboard; sourceTree = "<group>"; };
 		BDA2737CFDDD0C6F3C5DF10F /* Pods_BabySafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabySafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,7 +56,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77BBCC1B2872000B00EE6E79 /* FirebaseFirestoreCombine-Community in Frameworks */,
 				18760654A63030AAB3FD9C81 /* Pods_BabySafe.framework in Frameworks */,
+				77BBCC192872000B00EE6E79 /* FirebaseFirestore in Frameworks */,
+				77BBCC1D2872000B00EE6E79 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +140,7 @@
 				77A0248E2861FFF1007D76B8 /* Assets.xcassets */,
 				77A024902861FFF1007D76B8 /* LaunchScreen.storyboard */,
 				77A024932861FFF1007D76B8 /* Info.plist */,
+				77BBCC1E2872007800EE6E79 /* GoogleService-Info.plist */,
 				775F2B0B286802F900662397 /* Constants.swift */,
 			);
 			path = BabySafe;
@@ -172,6 +181,11 @@
 			dependencies = (
 			);
 			name = BabySafe;
+			packageProductDependencies = (
+				77BBCC182872000B00EE6E79 /* FirebaseFirestore */,
+				77BBCC1A2872000B00EE6E79 /* FirebaseFirestoreCombine-Community */,
+				77BBCC1C2872000B00EE6E79 /* FirebaseFirestoreSwift */,
+			);
 			productName = BabySafe;
 			productReference = 77A024822861FFF0007D76B8 /* BabySafe.app */;
 			productType = "com.apple.product-type.application";
@@ -200,6 +214,9 @@
 				Base,
 			);
 			mainGroup = 77A024792861FFF0007D76B8;
+			packageReferences = (
+				77BBCC172872000A00EE6E79 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 77A024832861FFF0007D76B8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -220,6 +237,7 @@
 				77ED3EA92867D91A009384C8 /* TipsStoryboard.storyboard in Resources */,
 				77A0248D2861FFF0007D76B8 /* Main.storyboard in Resources */,
 				775F2B072867F92D00662397 /* TipTableViewCell.xib in Resources */,
+				77BBCC1F2872007800EE6E79 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +500,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		77BBCC172872000A00EE6E79 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		77BBCC182872000B00EE6E79 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77BBCC172872000A00EE6E79 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		77BBCC1A2872000B00EE6E79 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77BBCC172872000A00EE6E79 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		77BBCC1C2872000B00EE6E79 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77BBCC172872000A00EE6E79 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 77A0247A2861FFF0007D76B8 /* Project object */;
 }
