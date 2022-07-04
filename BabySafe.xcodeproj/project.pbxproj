@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18760654A63030AAB3FD9C81 /* Pods_BabySafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA2737CFDDD0C6F3C5DF10F /* Pods_BabySafe.framework */; };
+		7743310228726FC60034BFE0 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7743310128726FC60034BFE0 /* FirestoreManager.swift */; };
 		775F2B012867F12A00662397 /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775F2B002867F12A00662397 /* TipsViewController.swift */; };
 		775F2B062867F92D00662397 /* TipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775F2B042867F92D00662397 /* TipTableViewCell.swift */; };
 		775F2B072867F92D00662397 /* TipTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 775F2B052867F92D00662397 /* TipTableViewCell.xib */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		0CF10BE7D0A8130906201A5D /* Pods-BabySafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabySafe.release.xcconfig"; path = "Target Support Files/Pods-BabySafe/Pods-BabySafe.release.xcconfig"; sourceTree = "<group>"; };
+		7743310128726FC60034BFE0 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		775F2B002867F12A00662397 /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		775F2B042867F92D00662397 /* TipTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipTableViewCell.swift; sourceTree = "<group>"; };
 		775F2B052867F92D00662397 /* TipTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipTableViewCell.xib; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				77A024932861FFF1007D76B8 /* Info.plist */,
 				77BBCC1E2872007800EE6E79 /* GoogleService-Info.plist */,
 				775F2B0B286802F900662397 /* Constants.swift */,
+				7743310128726FC60034BFE0 /* FirestoreManager.swift */,
 			);
 			path = BabySafe;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				775F2B0E2869108700662397 /* DetalleTipViewController.swift in Sources */,
 				77A024882861FFF0007D76B8 /* SceneDelegate.swift in Sources */,
 				775F2B012867F12A00662397 /* TipsViewController.swift in Sources */,
+				7743310228726FC60034BFE0 /* FirestoreManager.swift in Sources */,
 				775F2B0C286802F900662397 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

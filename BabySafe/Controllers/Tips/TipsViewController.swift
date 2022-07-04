@@ -11,12 +11,35 @@ class TipsViewController: UIViewController {
 
     @IBOutlet weak var tipsTableView: UITableView!
     
-    var tipsList: [Tip] = Constants.tipsList
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
+    
+    var tipsList: [Tip] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareView()
+        fetchTips()
     }
+    
+    func loading(_ value: Bool) {
+        if value {
+            indicatorView.isHidden = false
+            indicatorView.startAnimating()
+        } else {
+            indicatorView.isHidden = true
+            indicatorView.stopAnimating()
+        }
+    }
+    
+    private func fetchTips() {
+        loading(true)
+        FirestoreManager.fetchTips { [weak self] tips in
+            self?.loading(false)
+            self?.tipsList = tips
+            self?.tipsTableView.reloadData()
+        }
+    }
+    
     //configurar la vista tips para mostrar
     func prepareView() {
         title = "Tips"

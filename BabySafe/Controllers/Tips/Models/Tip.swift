@@ -5,7 +5,10 @@
 //  Created by Anghi Rodriguez on 25/06/22.
 //
 
-struct Tip {
+import FirebaseFirestoreSwift
+
+struct Tip: Codable {
+    @DocumentID var id: String?
     let title: String
     let description: String
     let likes: Int
