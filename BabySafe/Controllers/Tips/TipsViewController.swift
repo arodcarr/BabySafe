@@ -8,14 +8,25 @@
 import UIKit
 
 class TipsViewController: UIViewController {
-
+    typealias completion = (([Tip]) -> Void)
     @IBOutlet weak var tipsTableView: UITableView!
-    
     @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     
     var tipsList: [Tip] = []
+    
+    lazy var refreshControll: UIRefreshControl = {
+        let refreshControll = UIRefreshControl()
+        refreshControll.addTarget(self, action: #selector(TipsViewController.handleRefresh(_:)), for: UIControl.Event.valueChanged)
+        refreshControll.tintColor = Constants.mainColor
+        return refreshControll
+    }()
+    
+    @objc func handleRefresh(_ refreshControll: UIRefreshControl) {
+        refreshControll.endRefreshing()
+        fetchTips()
+    }
 
-    override func viewDidLoad() {
+    override func viewDidLoad() { //se ejecuta antes de mostrar la vista al usuario
         super.viewDidLoad()
         prepareView()
         fetchTips()
@@ -35,7 +46,9 @@ class TipsViewController: UIViewController {
         loading(true)
         FirestoreManager.fetchTips { [weak self] tips in
             self?.loading(false)
-            self?.tipsList = tips
+            self?.tipsList = tips.sorted(by: {
+                return $0.likes > $1.likes
+            })
             self?.tipsTableView.reloadData()
         }
     }
@@ -47,9 +60,10 @@ class TipsViewController: UIViewController {
         navigationController?.navigationBar.tintColor = Constants.titleColor
         tabBarController?.tabBar.backgroundColor = Constants.mainColor
         tabBarController?.tabBar.tintColor = Constants.titleColor
-        tipsTableView.delegate = self
+        tipsTableView.delegate = self // hace referencia al objeto actual de tipsViewcontroller, dentro del table view
         tipsTableView.dataSource = self
         tipsTableView.register(UINib(nibName: "TipTableViewCell", bundle: nil), forCellReuseIdentifier: "TipTableViewCell")
+        tipsTableView.addSubview(self.refreshControll)
         let addTipButton = UIBarButtonItem(image: .add , style: .plain, target: self, action: #selector(addTipButtonPressed))
         self.navigationItem.rightBarButtonItem  = addTipButton
     }
@@ -85,7 +99,7 @@ extension TipsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 157
             
     }
     //retornar cada celda de la tabla
@@ -96,6 +110,8 @@ extension TipsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.titleLabel.text = tipsList[indexPath.row].title
         cell.descriptionLabel.text = tipsList[indexPath.row].description
         cell.likesLabel.text = "🍼 \(tipsList[indexPath.row].likes)"
+        cell.delegate = self
+        cell.indexPath = indexPath
         return cell
     }
     
@@ -107,9 +123,25 @@ extension TipsViewController: UITableViewDelegate, UITableViewDataSource {
 }
 extension TipsViewController: NuevoTipDelegate {
     func guardarTip(tip: Tip) {
-        tipsList.append(tip)
-        tipsTableView.reloadData()
+        FirestoreManager.addTip(tip: tip) { [weak self] response in
+            if response {
+                self?.fetchTips()
+            }
+        }
     }
+}
+
+extension TipsViewController: TipTableViewCellDelegate {
+    func likeButtonPressed(indexPath: IndexPath?) {
+        if let indexPath = indexPath {
+            var tip = tipsList[indexPath.row]
+            tip.likes = tip.likes + 1
+            FirestoreManager.updateTip(tip: tip)
+            fetchTips()
+        }
+    }
+    
+    
 }
 
 

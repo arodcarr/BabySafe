@@ -11,5 +11,5 @@ struct Tip: Codable {
     @DocumentID var id: String?
     let title: String
     let description: String
-    let likes: Int
+    var likes: Int
 }

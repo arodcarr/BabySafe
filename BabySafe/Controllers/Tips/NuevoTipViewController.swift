@@ -13,19 +13,26 @@ protocol NuevoTipDelegate {
 class NuevoTipViewController: UIViewController {
 
     var delegate: NuevoTipDelegate?
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var descriptionTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-    
     
     @IBAction func closeButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func guardarButtonPressed(_ sender: Any) {
-        delegate?.guardarTip(tip: Tip(title: "Titulo Prueba", description: "Descripcion", likes: 0))
+        guard let title = self.titleTextField.text,
+              let description = self.descriptionTextView.text,
+              !title.isEmpty,
+              !description.isEmpty else {
+                  return
+        }
+        let tip = Tip(id: nil, title:title, description: description, likes: 0)
+        delegate?.guardarTip(tip: tip)
         dismiss(animated: true, completion: nil)
     }
     
